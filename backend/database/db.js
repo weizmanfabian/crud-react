@@ -1,8 +1,11 @@
 import { Sequelize } from 'sequelize';
+import { configDatabase } from '../config.js';
 
-const db = new Sequelize('database_app', 'baq', 'Asiste.2021', {
-  host: 'localhost',
-  dialect: 'mysql'
+
+
+const db = new Sequelize(configDatabase.database, configDatabase.user, configDatabase.password, {
+  host: configDatabase.host,
+  dialect: configDatabase.dialect
 })
 
 export default db;
