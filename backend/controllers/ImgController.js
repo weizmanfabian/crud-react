@@ -1,8 +1,8 @@
-const path = require('path')
-var fs = require('fs');
+import path from 'path';
+import fs from 'fs';
 
 
-const singleFileUpload = (req, res) => {
+export const singleFileUpload = (req, res) => {
   if (!req.file) {
     console.log("NO hay imagen para cargar");
     res.json({ err: 'Debe Seleccionar una imagen' })
@@ -14,7 +14,7 @@ const singleFileUpload = (req, res) => {
   }
 }
 
-const deleteSingleFile = (req, res) => {
+export const deleteSingleFile = (req, res) => {
   let { nameFile } = req.params
   var filePath = path.join('./public') + nameFile;
   console.log(filePath)
@@ -23,8 +23,3 @@ const deleteSingleFile = (req, res) => {
   res.json({ msg: 'Image delete' })
 }
 
-
-module.exports = {
-  singleFileUpload,
-  deleteSingleFile
-}

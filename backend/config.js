@@ -1,14 +1,10 @@
-const configDatabase = {
+export const configDatabase = {
   host: 'localhost',
   dialect: 'mysql',
-  user: 'baq',
-  password: 'Asiste.2021',
+  user: 'root',
+  password: '',
   database: 'database_app'
 }
 
-const port = 8000;
+export const port = 8000;
 
-module.exports = {
-  configDatabase,
-  port
-}
