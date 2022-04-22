@@ -7,4 +7,4 @@ router.post('/uploadSingleFile', upload.single('img'), singleFileUpload)
 
 router.post('/deleteSingleFile/:nameFile', deleteSingleFile)
 
-module.exports = router;
+export default router;
